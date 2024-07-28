@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRGeneratorVC" customModule="QAre" customModuleProvider="target">
+            <connections>
+                <outlet property="addToFavBtn" destination="SKr-S6-DFD" id="p4v-c2-zOn"/>
+                <outlet property="downloadBtn" destination="tJ2-j9-vjt" id="3bJ-4X-r3U"/>
+                <outlet property="imageView" destination="unf-Xf-tqI" id="Hbi-sR-bJY"/>
+                <outlet property="shareBtn" destination="jr7-th-4kP" id="1wv-if-McM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="unf-Xf-tqI">
+                    <rect key="frame" x="30" y="109" width="333" height="333"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="unf-Xf-tqI" secondAttribute="height" multiplier="1:1" id="UME-q6-4sb"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-S6-DFD">
+                    <rect key="frame" x="20" y="748" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="iAw-BG-w5u"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="star.circle.fill" catalog="system" title="Button"/>
+                    <connections>
+                        <action selector="addToFavTapped:" destination="-1" eventType="touchUpInside" id="89X-Fi-ae0"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nbo-3A-bxE">
+                    <rect key="frame" x="20" y="658" width="353" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ2-j9-vjt">
+                            <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrow.down.circle.fill" catalog="system" title="Button"/>
+                            <connections>
+                                <action selector="downloadTapped:" destination="-1" eventType="touchUpInside" id="Kca-kK-2Cp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr7-th-4kP">
+                            <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="person.2.circle.fill" catalog="system" title="Button"/>
+                            <connections>
+                                <action selector="shareTapped:" destination="-1" eventType="touchUpInside" id="T8C-q6-eYF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Si1-Vf-VKX"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SKr-S6-DFD" firstAttribute="top" secondItem="Nbo-3A-bxE" secondAttribute="bottom" constant="30" id="033-yy-tsH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nbo-3A-bxE" secondAttribute="trailing" constant="20" id="DH8-Ea-kLL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SKr-S6-DFD" secondAttribute="bottom" constant="20" id="Ln8-Fl-1L6"/>
+                <constraint firstItem="SKr-S6-DFD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Mr5-AH-06m"/>
+                <constraint firstItem="unf-Xf-tqI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="R04-lx-GIb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="unf-Xf-tqI" secondAttribute="trailing" constant="30" id="VgW-DG-QwG"/>
+                <constraint firstItem="Nbo-3A-bxE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gtU-HI-kS7"/>
+                <constraint firstItem="unf-Xf-tqI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="srg-x4-0GQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SKr-S6-DFD" secondAttribute="trailing" constant="20" id="zIq-sb-I9J"/>
+            </constraints>
+            <point key="canvasLocation" x="-50" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.down.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.2.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
